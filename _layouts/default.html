@@ -1,17 +1,77 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "zh-CN" }}">
+<html lang="{{ site.lang | default: "zh-CN" }}" class="h-100">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="apple-itunes-app" content="app-id=6744570052">
+    <meta name="theme-color" content="#ffffff">
 
-{% seo %}
+    {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <style>
+      :root {
+        --content-max-width: 900px;
+        --primary-color: #24292e;
+        --background-color: #ffffff;
+      }
+      
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+        color: var(--primary-color);
+        background-color: var(--background-color);
+      }
+
+      .site-wrapper {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .content-wrapper {
+        flex: 1;
+        width: 100%;
+        max-width: var(--content-max-width);
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
+
+      @media (min-width: 768px) {
+        .content-wrapper {
+          padding: 3rem 2rem;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .content-wrapper {
+          padding: 4rem 2rem;
+        }
+      }
+
+      .markdown-body {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        word-wrap: break-word;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
   </head>
-  <body>
-    <div class="container-lg px-3 my-5 markdown-body">
-      {{ content }}
+  <body class="h-100">
+    <div class="site-wrapper">
+      <main class="content-wrapper">
+        <div class="markdown-body">
+          {{ content }}
+        </div>
+      </main>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
     <script>anchors.add();</script>

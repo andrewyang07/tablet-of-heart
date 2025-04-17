@@ -137,13 +137,14 @@
         margin: 2rem 0;
         padding: 1.5rem;
         border-radius: 8px;
-        background-color: #f6f8fa;
+        background-color: #f0f7ff;
         border: 1px solid var(--border-color);
+        border-left: 4px solid var(--highlight-color);
       }
 
-      .tutorial-section.highlight {
-        background-color: #f0f7ff;
-        border-left: 4px solid var(--highlight-color);
+      .tutorial-section h4 {
+        color: var(--highlight-color);
+        margin-top: 0;
       }
 
       .tutorial-step {
@@ -181,6 +182,14 @@
         height: auto;
         border-radius: 4px;
         margin: 1rem 0;
+      }
+      
+      video {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+        box-shadow: var(--card-shadow);
       }
 
       .troubleshooting {
@@ -244,7 +253,7 @@
           </a>
           <div class="nav-links">
             <a href="{{ '/#使用教程' | relative_url }}">使用教程</a>
-            <a href="{{ '/#添加小组件' | relative_url }}" class="active">添加小组件</a>
+            <a href="{{ '/#添加小组件' | relative_url }}">添加小组件</a>
             <a href="{{ '/#下载' | relative_url }}">下载应用</a>
             <a href="{{ '/#隐私政策' | relative_url }}">隐私政策</a>
           </div>
